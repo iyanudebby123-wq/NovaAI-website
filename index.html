@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaAI | My Digital Space</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #100d1b;
+            color: #f5f0ff;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: #191329;
+        }
+
+        .logo {
+            color: #b69af7;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #b69af7;
+        }
+
+        section {
+            padding: 65px 8%;
+        }
+
+        .hero {
+            min-height: 420px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 8vw, 65px);
+            line-height: 1.2;
+            margin: 15px 0;
+        }
+
+        .highlight {
+            color: #b69af7;
+        }
+
+        h2 {
+            color: #b69af7;
+            margin-bottom: 18px;
+            font-size: 30px;
+        }
+
+        p {
+            color: #d0c8df;
+            max-width: 700px;
+            margin-bottom: 15px;
+        }
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+}
+
+.project-box {
+    background: linear-gradient(145deg, #241b36, #191329);
+    padding: 25px;
+    border: 1px solid #493765;
+    border-radius: 15px;
+    margin: 0;
+    transition: 0.3s ease;
+}
+
+.project-box:hover {
+    transform: translateY(-6px);
+    border-color: #b69af7;
+    box-shadow: 0 8px 25px rgba(182, 154, 247, 0.15);
+}
+
+.project-box h3 {
+    color: #c5adff;
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.project-tag {
+    display: inline-block;
+    color: #b69af7;
+    background: #302344;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 12px;
+          }
+
+        button {
+            background: #b69af7;
+            color: #171321;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #d0bdff;
+        }
+
+        .greeting-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 520px;
+        }
+
+        .greeting-box input {
+            flex: 1;
+            min-width: 0;
+            padding: 12px;
+            border: 1px solid #8064b8;
+            border-radius: 8px;
+            background: #211a30;
+            color: white;
+            font-size: 15px;
+        }
+
+        .greeting-box input::placeholder {
+            color: #bdb1d0;
+        }
+
+        #greeting {
+            margin-top: 15px;
+            color: #c5adff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #191329;
+            color: #bdb1d0;
+        }
+
+        @media (max-width: 420px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .greeting-box {
+                gap: 6px;
+            }
+
+            .greeting-box button {
+                padding: 12px 10px;
+                font-size: 13px;
+            }
+          }
+      html {
+    scroll-behavior: smooth;
+          }
+      
+#contact {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+#contact h2 {
+    margin-bottom: 15px;
+}
+
+#contact p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.contact-button {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: #128C7E;
+    transform: translateY(-3px);
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+    <div class="logo">IY.</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+
+    <p class="welcome-label">
+        Welcome to Iyanuoluwa's Creative Space.
+    </p>
+
+    <h1>
+        Creating Ideas.<br>
+        Building <span class="highlight">Possibilities.</span>
+    </h1>
+
+    <p>
+        I'm an aspiring software developer passionate about
+        technology, creative design, artificial intelligence
+        and building useful digital solutions.
+    </p>
+
+    <button id="novaButton">Click Me</button>
+
+    <p id="message"></p>
+
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+
+    <p>
+        I am an aspiring software developer with a vision to
+        create innovative websites, intelligent applications
+        and digital experiences.
+    </p>
+
+    <p>
+        My journey is built around curiosity, creativity,
+        continuous learning and solving problems through
+        technology.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+
+    <p>HTML — Building website structures.</p>
+    <p>CSS — Designing beautiful interfaces.</p>
+    <p>JavaScript — Adding interaction and functionality.</p>
+    <p>Future focus — Artificial intelligence and software development.</p>
+</section>
+
+<section id="vision">
+    <h2>My Vision</h2>
+    <h3>Think Beyond Limits.</h3>
+
+    <p>
+        My goal is to become a skilled software engineer
+        and build technology that makes a meaningful difference.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Featured Projects</h2>
+
+    <p>
+        Exploring ideas, designing solutions and turning
+        creativity into meaningful digital experiences.
+    </p>
+
+    <div class="projects-grid">
+
+        <div class="project-box">
+            <span class="project-tag">AI Innovation</span>
+            <h3>NovaAI</h3>
+            <p>
+                An ambitious AI-powered creative platform
+                focused on intelligent digital experiences,
+                video tools and innovation.
+            </p>
+          <button onclick="alert('NovaAI coming soon!')">
+            Explore
+          </button>
+        </div>
+
+        <div class="project-box">
+    <span class="project-tag">Web Development</span>
+    <h3>Web Creations</h3>
+    <p>
+        A growing collection of beautiful website
+        designs, responsive templates and
+        interactive digital experiences.
+    </p>
+    <button onclick="alert('Web Creations coming soon!')">
+        Explore
+    </button>
+</div>
+
+<div class="project-box">
+    <span class="project-tag">Software Ideas</span>
+    <h3>Creative Software</h3>
+    <p>
+        Exploring innovative application ideas
+        that combine technology, creativity
+        and practical solutions.
+    </p>
+    <button onclick="alert('Creative Software coming soon!')">
+        Explore
+    </button>
+</div>
+
+    </div>
+</section>
+          
+    <section id="meet">
+        <h2>Meet NovaAI</h2>
+
+        <div class="greeting-box">
+            <input
+                type="text"
+                id="userName"
+                placeholder="Enter your name"
+            >
+
+            <button id="greetButton">Introduce Me</button>
+        </div>
+
+        <p id="greeting"></p>
+    </section>
+
+  
+<!-- CONTACT SECTION -->
+<section id="contact">
+    <h2>Let's Connect</h2>
+    <p>
+        Have a project or an idea?
+        I'd love to hear from you.
+    </p>
+
+    <a href="https://api.whatsapp.com/send?phone=2349075942984"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="contact-button">
+        Contact Me on WhatsApp
+    </a>
+</section>
+
+
+    <footer>
+    <p>© 2026 Iyanuoluwa. All Rights Reserved.</p>
+    <p>Designed with creativity. Built with passion. Powered by possibilities.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
